@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "phone2region.resource-path",
+      "type": "java.lang.String",
+      "description": "资源路径(优先级0),读取项目文件夹resources下的路径.",
+      "sourceType": "cn.z.phone2region.autoconfigure.Phone2RegionProperties"
+    },
+    {
+      "name": "phone2region.local-path",
+      "type": "java.lang.String",
+      "description": "本地路径(优先级1),读取本机物理路径.",
+      "sourceType": "cn.z.phone2region.autoconfigure.Phone2RegionProperties"
+    },
+    {
+      "name": "phone2region.url-path",
+      "type": "java.lang.String",
+      "description": "URL路径(优先级2),读取URL路径.可以用：https://cdn.jsdelivr.net/gh/ali1416/phone2region@master/data/phone2region.zdat.",
+      "sourceType": "cn.z.phone2region.autoconfigure.Phone2RegionProperties"
+    }
+  ]
+}

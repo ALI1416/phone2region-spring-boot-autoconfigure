@@ -1,0 +1,28 @@
+# resource 使用资源路径
+#phone2region:
+#  resource-path: /file/phone2region/phone2region.zdat
+
+# local 使用本地路径
+#phone2region:
+#  local-path: E:/phone2region.zip
+
+# url 使用url路径
+phone2region:
+  url-path: https://cdn.jsdelivr.net/gh/ali1416/phone2region@master/data/phone2region.zdat
+
+# priority 优先级
+#phone2region:
+#  resource-path: /file/phone2region/phone2region.zdat
+#  local-path: E:/phone2region.zip
+#  url-path: https://cdn.jsdelivr.net/gh/ali1416/phone2region@master/data/phone2region.zdat
+
+# none 没有配置
+# 不需要配置
+
+# error 配置错误
+#phone2region:
+#  resource-path: /file/phone2region/phone2region
+
+# init 配置属性后又手动初始化
+#phone2region:
+#  resource-path: /file/phone2region/phone2region.zdat
