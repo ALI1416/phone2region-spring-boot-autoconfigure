@@ -4,7 +4,7 @@
 [![Java Support](https://img.shields.io/badge/Java-8+-green)](https://openjdk.org/)
 [![Maven Central](https://img.shields.io/maven-central/v/cn.404z/phone2region-spring-boot-autoconfigure?label=Maven%20Central)](https://mvnrepository.com/artifact/cn.404z/phone2region-spring-boot-autoconfigure)
 [![Tag](https://img.shields.io/github/v/tag/ali1416/phone2region-spring-boot-autoconfigure?label=Tag)](https://github.com/ALI1416/phone2region-spring-boot-autoconfigure/tags)
-[![Repo Size](https://img.shields.io/github/repo-size/ali1416/phone2region-spring-boot-autoconfigure?label=Repo%20Size&color=success)](https://github.com/ALI1416/phone2region-spring-boot-autoconfigure)
+[![Repo Size](https://img.shields.io/github/repo-size/ali1416/phone2region-spring-boot-autoconfigure?label=Repo%20Size&color=success)](https://github.com/ALI1416/phone2region-spring-boot-autoconfigure/archive/refs/heads/master.zip)
 
 [![Java CI](https://github.com/ALI1416/phone2region-spring-boot-autoconfigure/actions/workflows/ci.yml/badge.svg)](https://github.com/ALI1416/phone2region-spring-boot-autoconfigure/actions/workflows/ci.yml)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ALI1416_phone2region-spring-boot-autoconfigure&metric=coverage)
