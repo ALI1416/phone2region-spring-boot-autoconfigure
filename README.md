@@ -148,6 +148,7 @@ log.info(String.valueOf(Phone2Region.parse("18754710000")));
 ```
 
 结果
+
 ```txt
 [main]  INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
 [main] ERROR cn.z.phone2region.Phone2Region           : 未初始化！
@@ -208,9 +209,10 @@ log.info(String.valueOf(Phone2Region.parse("18754710000")));
 
 ## 交流
 
-QQ：1416978277  
-微信：1416978277  
-支付宝：1416978277@qq.com  
+- [x] QQ：`1416978277`
+- [x] 微信：`1416978277`
+- [x] 支付宝：`1416978277@qq.com`
+
 ![交流](https://cdn.jsdelivr.net/gh/ALI1416/ALI1416/image/contact.png)
 
 ## 赞助
