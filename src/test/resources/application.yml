@@ -7,8 +7,8 @@
 #  local-path: E:/phone2region.zdb
 
 # url 使用url路径
-#phone2region:
-#  url-path: https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb
+phone2region:
+  url-path: https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb
 
 # priority 优先级
 #phone2region:
@@ -24,5 +24,5 @@
 #  resource-path: /file/phone2region/phone2region
 
 # init 配置属性后又手动初始化
-phone2region:
-  resource-path: /file/phone2region/phone2region.zdb
+#phone2region:
+#  resource-path: /file/phone2region/phone2region.zdb

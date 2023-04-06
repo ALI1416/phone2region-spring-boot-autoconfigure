@@ -67,7 +67,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 使用url路径
      */
-    // @Test
+    @Test
     void test02Url() {
         log.info(String.valueOf(Phone2Region.parse(phone)));
         // [main] INFO c.z.p.a.Phone2RegionAutoConfiguration    :
@@ -131,7 +131,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 配置属性后又手动初始化
      */
-    @Test
+    // @Test
     void test06Init() {
         Phone2Region.initByFile(zdbPath);
         log.info(String.valueOf(Phone2Region.parse(phone)));
