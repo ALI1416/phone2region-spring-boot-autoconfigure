@@ -1,6 +1,7 @@
 package cn.z.phone2region.autoconfigure;
 
 import cn.z.phone2region.Phone2Region;
+import cn.z.phone2region.Phone2RegionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -52,6 +53,7 @@ public class Phone2RegionAutoConfiguration {
                 Phone2Region.init(new ClassPathResource(phone2RegionProperties.getResourcePath()).getInputStream());
             } catch (Exception e) {
                 log.error("资源文件异常！", e);
+                throw new Phone2RegionException("资源文件异常！");
             }
         } else if (phone2RegionProperties.getLocalPath() != null) {
             log.info("读取到配置，LOCAL_PATH为：{}", phone2RegionProperties.getLocalPath());

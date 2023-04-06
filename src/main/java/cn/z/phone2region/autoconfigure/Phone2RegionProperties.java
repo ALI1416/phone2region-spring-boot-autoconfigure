@@ -32,7 +32,7 @@ public class Phone2RegionProperties {
     /**
      * URL路径(优先级2)<br>
      * 读取URL路径<br>
-     * 可以用：<code>https://cdn.jsdelivr.net/gh/ali1416/phone2region@master/data/phone2region.zdat</code>
+     * 例如：<code>https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb</code>
      */
     private String urlPath;
 
