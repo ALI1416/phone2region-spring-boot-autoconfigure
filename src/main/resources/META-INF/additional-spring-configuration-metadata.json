@@ -15,7 +15,7 @@
     {
       "name": "phone2region.url-path",
       "type": "java.lang.String",
-      "description": "URL路径(优先级2),读取URL路径.例如：https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb.",
+      "description": "URL路径(优先级2),读取URL路径.例如：https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb.",
       "sourceType": "cn.z.phone2region.autoconfigure.Phone2RegionProperties"
     }
   ]

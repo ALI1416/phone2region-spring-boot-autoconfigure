@@ -71,9 +71,9 @@ class Phone2RegionAutoConfigurationTest {
     void test02Url() {
         log.info(String.valueOf(Phone2Region.parse(phone)));
         // [main] INFO c.z.p.a.Phone2RegionAutoConfiguration    :
-        // 读取到配置，URL_PATH为：https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb
+        // 读取到配置，URL_PATH为：https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
         // [main] INFO cn.z.phone2region.Phone2Region           :
-        // 初始化，URL路径为：https://cdn.jsdelivr.net/gh/ali1416/phone2region@2.0.0/data/phone2region.zdb
+        // 初始化，URL路径为：https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
         // [main] INFO cn.z.phone2region.Phone2Region           :
         // 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
         // [main] INFO .z.p.a.Phone2RegionAutoConfigurationTest :
