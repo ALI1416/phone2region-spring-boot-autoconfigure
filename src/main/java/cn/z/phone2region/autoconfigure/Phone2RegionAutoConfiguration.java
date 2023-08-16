@@ -48,7 +48,7 @@ public class Phone2RegionAutoConfiguration {
     @PostConstruct
     public void init() {
         if (phone2RegionProperties.getResourcePath() != null) {
-            log.info("读取到配置，RESOURCE_PATH为：{}", phone2RegionProperties.getResourcePath());
+            log.info("手机号码转区域配置：资源路径RESOURCE_PATH {}", phone2RegionProperties.getResourcePath());
             try {
                 Phone2Region.init(new ClassPathResource(phone2RegionProperties.getResourcePath()).getInputStream());
             } catch (Exception e) {
@@ -56,10 +56,10 @@ public class Phone2RegionAutoConfiguration {
                 throw new Phone2RegionException("资源文件异常！");
             }
         } else if (phone2RegionProperties.getLocalPath() != null) {
-            log.info("读取到配置，LOCAL_PATH为：{}", phone2RegionProperties.getLocalPath());
+            log.info("手机号码转区域配置：本地路径LOCAL_PATH {}", phone2RegionProperties.getLocalPath());
             Phone2Region.initByFile(phone2RegionProperties.getLocalPath());
         } else if (phone2RegionProperties.getUrlPath() != null) {
-            log.info("读取到配置，URL_PATH为：{}", phone2RegionProperties.getUrlPath());
+            log.info("手机号码转区域配置：URL路径URL_PATH {}", phone2RegionProperties.getUrlPath());
             Phone2Region.initByUrl(phone2RegionProperties.getUrlPath());
         }
     }
