@@ -26,7 +26,7 @@
 <dependency>
   <groupId>cn.404z</groupId>
   <artifactId>phone2region-spring-boot-autoconfigure</artifactId>
-  <version>2.1.1</version>
+  <version>2.1.2</version>
 </dependency>
 <dependency>
   <groupId>org.springframework.boot</groupId>
@@ -37,7 +37,7 @@
 
 ## 使用方法
 
-常量
+### 定义常量
 
 ```java
 final String zdbPath = "E:/phone2region.zdb";
@@ -46,176 +46,90 @@ final int phone = 1875471;
 
 ### 使用资源路径
 
-配置文件
-
-```yml
-phone2region:
-  resource-path: /file/phone2region/phone2region.zdb
-```
-
-代码
-
 ```java
+// phone2region:
+//   resource-path: /file/phone2region/phone2region.zdb
 log.info(String.valueOf(Phone2Region.parse(phone)));
 log.info("是否已经初始化：{}", Phone2Region.initialized());
-```
-
-结果
-
-```txt
-[main] INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，RESOURCE_PATH为：/file/phone2region/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : 是否已经初始化：true
+// INFO c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：资源路径RESOURCE_PATH /file/phone2region/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 数据加载成功：版本号VERSION 20230225 ，校验码CRC32 C8AEEA0A
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : 是否已经初始化：true
 ```
 
 ### 使用本地路径
 
-配置文件
-
-```yml
-phone2region:
-  local-path: E:/phone2region.zdb
-```
-
-代码
-
 ```java
+// phone2region:
+//   local-path: E:/phone2region.zdb
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main] INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，LOCAL_PATH为：E:/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 初始化，文件路径为：E:/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
+// INFO c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：本地路径LOCAL_PATH E:/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 手机号码转区域初始化：文件路径LOCAL_PATH E:/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 数据加载成功：版本号VERSION 20230225 ，校验码CRC32 C8AEEA0A
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
 ```
 
 ### 使用url路径
 
-配置文件
-
-```yml
-phone2region:
-  url-path: https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
-```
-
-代码
-
 ```java
+// phone2region:
+//   url-path: https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main] INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，URL_PATH为：https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 初始化，URL路径为：https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
+// INFO c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：URL路径URL_PATH https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 手机号码转区域初始化：URL路径URL_PATH https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 数据加载成功：版本号VERSION 20230225 ，校验码CRC32 C8AEEA0A
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
 ```
 
 ### 优先级
 
-配置文件
-
-```yml
-phone2region:
-  resource-path: /file/phone2region/phone2region.zdb
-  local-path: E:/phone2region.zdb
-  url-path: https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
-```
-
-代码
-
 ```java
+// phone2region:
+//   resource-path: /file/phone2region/phone2region.zdb
+//   local-path: E:/phone2region.zdb
+//   url-path: https://www.404z.cn/files/phone2region/v2.0.0/data/phone2region.zdb
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main] INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，RESOURCE_PATH为：/file/phone2region/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
+// INFO c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：资源路径RESOURCE_PATH /file/phone2region/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 数据加载成功：版本号VERSION 20230225 ，校验码CRC32 C8AEEA0A
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
 ```
 
 ### 没有配置
 
-配置文件
-
-```yml
-# 不需要配置
-```
-
-代码
-
 ```java
+// # 不需要配置
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main]  INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] ERROR cn.z.phone2region.Phone2Region           : 未初始化！
-[main]  INFO .z.p.a.Phone2RegionAutoConfigurationTest : null
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// cn.z.phone2region.Phone2RegionException: 未初始化！
 ```
 
 ### 配置错误
 
-配置文件
-
-```yml
-phone2region:
-  resource-path: /file/phone2region/phone2region
-```
-
-代码
-
 ```java
+// phone2region:
+//   resource-path: /file/phone2region/phone2region
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main]  INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，RESOURCE_PATH为：/file/phone2region/phone2region
-[main] ERROR cn.z.phone2region.Phone2Region           : 资源文件异常！
-java.io.FileNotFoundException: class path resource [file/phone2region/phone2region] cannot be opened because it does not exist
-[main] ERROR o.s.boot.SpringApplication               : Application run failed
+//  INFO  c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：资源路径RESOURCE_PATH /file/phone2region/phone2region
+// ERROR  c.z.p.a.Phone2RegionAutoConfiguration    : 资源文件异常！
+// java.io.FileNotFoundException: class path resource [file/phone2region/phone2region] cannot be opened because it does not exist
 ```
 
 ### 配置属性后又手动初始化
 
-配置文件
-
-```yml
-phone2region:
-  resource-path: /file/phone2region/phone2region.zdb
-```
-
-代码
-
 ```java
-Phone2Region.initByFile("E:/phone2region.zdb");
+// phone2region:
+//   resource-path: /file/phone2region/phone2region.zdb
+Phone2Region.initByFile(zdbPath);
 log.info(String.valueOf(Phone2Region.parse(phone)));
-```
-
-结果
-
-```txt
-[main] INFO c.z.p.a.Phone2RegionAutoConfiguration    : 读取到配置，RESOURCE_PATH为：/file/phone2region/phone2region.zdb
-[main] INFO cn.z.phone2region.Phone2Region           : 数据加载成功，版本号为：20230225，校验码为：C8AEEA0A
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.442 seconds (JVM running for 0.931)
-[main] WARN cn.z.phone2region.Phone2Region           : 已经初始化过了，不可重复初始化！
-[main] INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
+// INFO c.z.p.a.Phone2RegionAutoConfiguration    : 手机号码转区域配置：资源路径RESOURCE_PATH /file/phone2region/phone2region.zdb
+// INFO cn.z.phone2region.Phone2Region           : 数据加载成功：版本号VERSION 20230225 ，校验码CRC32 C8AEEA0A
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Started Phone2RegionAutoConfigurationTest in 0.86 seconds (JVM running for 2.316)
+// WARN cn.z.phone2region.Phone2Region           : 已经初始化过了，不可重复初始化！
+// INFO .z.p.a.Phone2RegionAutoConfigurationTest : Region{province='山东', city='济宁', zipCode='272000', areaCode='0537', isp='移动'}
 ```
 
 更多请见[测试](./src/test)

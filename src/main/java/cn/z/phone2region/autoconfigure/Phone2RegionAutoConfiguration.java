@@ -5,10 +5,7 @@ import cn.z.phone2region.Phone2RegionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-
-import javax.annotation.PostConstruct;
 
 /**
  * <h1>手机号码转区域自动配置</h1>
@@ -20,7 +17,6 @@ import javax.annotation.PostConstruct;
  * @author ALI[ali-k@foxmail.com]
  * @since 1.0.0
  **/
-@Configuration
 @EnableConfigurationProperties(Phone2RegionProperties.class)
 public class Phone2RegionAutoConfiguration {
 
@@ -28,10 +24,6 @@ public class Phone2RegionAutoConfiguration {
      * 日志实例
      */
     private static final Logger log = LoggerFactory.getLogger(Phone2RegionAutoConfiguration.class);
-    /**
-     * Phone2RegionProperties
-     */
-    private final Phone2RegionProperties phone2RegionProperties;
 
     /**
      * 构造函数(自动注入)
@@ -39,14 +31,6 @@ public class Phone2RegionAutoConfiguration {
      * @param phone2RegionProperties Phone2RegionProperties
      */
     public Phone2RegionAutoConfiguration(Phone2RegionProperties phone2RegionProperties) {
-        this.phone2RegionProperties = phone2RegionProperties;
-    }
-
-    /**
-     * 初始化
-     */
-    @PostConstruct
-    public void init() {
         if (phone2RegionProperties.getResourcePath() != null) {
             log.info("手机号码转区域配置：资源路径RESOURCE_PATH {}", phone2RegionProperties.getResourcePath());
             try {
