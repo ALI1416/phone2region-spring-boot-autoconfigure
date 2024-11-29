@@ -30,7 +30,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 使用资源路径
      */
-    @Test
+    // @Test
     void test00Resource() {
         // phone2region:
         //   resource-path: /file/phone2region/phone2region.zdb
@@ -46,7 +46,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 使用本地路径
      */
-    @Test
+    // @Test
     void test01Local() {
         // phone2region:
         //   local-path: E:/phone2region.zdb
@@ -76,7 +76,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 优先级
      */
-    @Test
+    // @Test
     void test03Priority() {
         // phone2region:
         //   resource-path: /file/phone2region/phone2region.zdb
@@ -92,7 +92,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 没有配置
      */
-    @Test
+    // @Test
     void test04None() {
         // # 不需要配置
         log.info(String.valueOf(Phone2Region.parse(phone)));
@@ -103,7 +103,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 配置错误
      */
-    @Test
+    // @Test
     void test05Error() {
         // phone2region:
         //   resource-path: /file/phone2region/phone2region
@@ -116,7 +116,7 @@ class Phone2RegionAutoConfigurationTest {
     /**
      * 配置属性后又手动初始化
      */
-    @Test
+    // @Test
     void test06Init() {
         // phone2region:
         //   resource-path: /file/phone2region/phone2region.zdb

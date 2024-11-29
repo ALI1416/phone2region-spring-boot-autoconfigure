@@ -36,8 +36,7 @@ public class Phone2RegionAutoConfiguration {
             try {
                 Phone2Region.init(new ClassPathResource(phone2RegionProperties.getResourcePath()).getInputStream());
             } catch (Exception e) {
-                log.error("资源文件异常！", e);
-                throw new Phone2RegionException("资源文件异常！");
+                throw new Phone2RegionException("资源文件异常！", e);
             }
         } else if (phone2RegionProperties.getLocalPath() != null) {
             log.info("手机号码转区域配置：本地路径LOCAL_PATH {}", phone2RegionProperties.getLocalPath());
