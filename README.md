@@ -26,7 +26,7 @@
 <dependency>
   <groupId>cn.404z</groupId>
   <artifactId>phone2region-spring-boot-autoconfigure</artifactId>
-  <version>2.3.1</version>
+  <version>2.4.0</version>
 </dependency>
 <dependency>
   <groupId>org.springframework.boot</groupId>
